@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    </head>
+    <body>
+        <body>
+            <div id="app">
+                <input v-bind:type="firstInputType" />
+                <input v-bind:type="secondInputType" />
+                <button v-on:click="changeTypeButton">인풋 타입 일괄 변경 버튼</button>
+            </div>
+            <script>
+                const app = Vue.createApp({
+                    data() {
+                        return {
+                            firstInputType: 'checkbox',
+                            secondInputType: 'radio',
+                };
+            },
+            methods: {
+               changeTypeButton(){
+                if(this.firstInputType == 'checkbox') {
+                    this.firstInputType = 'radio'
+                    this.secondInputType = 'checkbox'
+                } else {
+                    this.firstInputType = 'checkbox'
+                    this.secondInputType = 'radio'
+                }
+               }
+            },
+            }).mount('#app');
+            </script>
+            </body>
+</html>
