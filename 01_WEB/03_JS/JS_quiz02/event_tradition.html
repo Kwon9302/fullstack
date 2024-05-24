@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <script>
+            window.onload = function () {
+                const button = document.getElementById('button');
+
+                // 구버전
+                button.onclick = function () {
+                    console.log('onclick에 의한 콘솔 로그');
+                };
+
+                // 얘가 더 중요 얘만 봐
+                button.addEventListener('click', function () {
+                    console.log('addEventListener에 의한 콘솔 로그');
+                });
+            };
+        </script>
+    </head>
+    <body>
+        <button id="button">버튼</button>
+    </body>
+</html>

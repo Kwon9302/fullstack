@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <script>
+            // 01
+            // alert('Hello World..!');
+            console.log('Hello World...!');
+            console.log('Hello World...!');
+
+            // 02
+            let radius = 10;
+            const PI = 3.141592; // 상수는 대문자!
+            console.log(radius ** 2 * PI);
+
+            // 03
+            const date = new Date();
+            // console.log(date);
+            const time = date.getHours();
+            if (time >= 12) console.log('오후입니다');
+            else console.log('오전입니다.');
+
+            // 04
+            let season = date.getMonth() + 1;
+            // console.log(season);
+            if (season <= 5 && season >= 3) console.log('봄입니다.');
+            else if (season <= 8) console.log('여름입니다.');
+            else if (season <= 11) console.log('가을입니다.');
+            else console.log('겨울입니다.');
+
+            // 05
+            let data = [10, 20, 30, 40, 50];
+            console.log(data.length);
+            for (let i = 0; i < data.length; i++) {
+                console.log(data[i]);
+            }
+
+            // 06
+            let dataLength = 0;
+            while (dataLength < data.length) {
+                console.log(data[dataLength]);
+                dataLength++;
+            }
+
+            // 07
+            let sum = 0;
+            for (let i = 1; i <= 100; i++) {
+                sum += i;
+            }
+            console.log(sum);
+
+            // 08
+            function square(x) {
+                return x ** 2;
+            }
+            console.log(square(5));
+
+            // 09
+            function callBack() {
+                console.log('함수 호출');
+            }
+            function hello() {
+                console.log('hello');
+            }
+
+            function callcallBack(callback, lotaion) {
+                for (let i = 0; i < lotaion; i++) {
+                    callback();
+                }
+            }
+            callcallBack(hello, 5);
+        </script>
+    </head>
+    <body></body>
+</html>

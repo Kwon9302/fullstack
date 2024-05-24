@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <!-- <form method = "post"> Body영역에 포함되어 전송(비노출) 용량제한 x-->
+        <form method="get">
+            <!-- https://www.google.com/search?q=html 와 같이 URL파라미터로 전달(노출)-->
+
+            <!-- type = 속성,          ↓ 개발자가 결정 -->
+            <input type="text" name="search" />
+
+            <!-- type = sumbit -> 제출 모양 설정 -->
+            <input type="submit" />
+        </form>
+
+        <form>
+            <!--  name값 지정하기(그룹을 지어줌), value = (초기)값 지정, placeholder=사용자 가이드 문자열 -->
+            <input type="text" name="text" value="text" /><br />
+            <input type="password" name="password" placeholder="password를 입력하세요" /><br />
+        </form>
+        <br />
+
+        <form>
+            <!-- id="name"값을 for값에 넣어준다. -->
+            <label for="name">이름</label>
+            <input id="name" type="radio" value="nono" />
+            <br />
+            <input type="checkbox" id="agreement" , name="agreement" /><br />
+        </form>
+        <br />
+        <form>
+            <select name="food">
+                <!-- <select multiple = "multiple"> 다중 선택 -->
+                <option>김밥</option>
+                <option value="f2">떡볶이</option>
+                <option>순대</option>
+                <option>어묵</option>
+            </select>
+            <input type="submit" />
+        </form>
+        <br />
+        <form>
+            <select>
+                <!-- grouping 가능-->
+                <optgroup label="HTLM 5">
+                    <option>김밥</option>
+                    <option value="f2">떡볶이</option>
+                    <option>순대</option>
+                    <option>어묵</option>
+                </optgroup>
+            </select>
+            <input type="submit" />
+        </form>
+
+        <textarea>
+            tetetetetetetete
+            tetetetetetetetetet
+        </textarea>
+
+        <!-- div = 자동줄바꿈 -->
+        <div>block 형식</div>
+        <div>block 형식</div>
+        <div>block 형식</div>
+        <div>block 형식</div>
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+
+        <!-- span = 한줄(inline) -->
+        <span>inline형식1</span>
+        <span>inline형식1</span>
+        <span>inline형식1</span>
+        <span>inline형식1</span>
+        <span>inline형식1</span>
+        <span>inline형식1</span>
+    </body>
+</html>
