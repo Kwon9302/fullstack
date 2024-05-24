@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <style>
+            h1 {
+                /* box-shadow = text-shadow */
+                /* 오른쪽 아래 흐림도 색상 */
+                text-shadow: 5px 5px 50px black;
+            }
+            .box {
+                border: 3px solid black;
+                /* 중첩그림자만들기 */
+                box-shadow: 10px 10px 10px black, 10px 10px 20px orange,
+                    10px 10px 30px red;
+                text-shadow: 10px 10px 10px black, 10px 10px 20px orange,
+                    10px 10px 30px red;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Lorem ipsum dolor sit amet.</h1>
+        <div class="box">
+            <h1>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                Tempora accusantium minus sunt impedit quisquam dolor dolorum
+                ipsa!
+            </h1>
+        </div>
+    </body>
+</html>
