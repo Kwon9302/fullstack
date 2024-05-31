@@ -1,0 +1,22 @@
+[
+    {
+        "id": 1,
+        "name": "장영규",
+        "role": "베이스",
+        "photo": "http://sstatic.naver.net/people/90/200810291643098681.jpg",
+        "desc": "음악감독,베이스연주가,가수",
+        "insta": "",
+        "facebook": "",
+        "youtube": ""
+    },
+    {
+        "id": 2,
+        "name": "이철희",
+        "role": "드럼",
+        "photo": "http://sstatic.naver.net/people/25/202004271203269741.jpg",
+        "desc": "드럼연주가",
+        "insta": "https://www.instagram.com/chulheedrum/",
+        "facebook": "",
+        "youtube": "https://www.youtube.com/channel/UCt4_srP6q_aPsmuZ3W3R-Uw"
+    }
+]
