@@ -21,14 +21,19 @@ const userPassword = ref('')
 // npx json-server db.json -- 서버 실행.
 async function login(){
   try {
-    // db 서버 url
+    // db 서버 url설정
     const url = 'http://localhost:3000/users'
     const loginRes = await axios.get(url)
 
+    // console.log(loginRes)
+
+    // 여기서 data는 db.json에서 입력한 json형태의 id, password 배열값들
     const userArr = loginRes.data;
+
+    //item은 userArr 배열의 각 개체, index는 그 배열의 index값.
     const findedUser = userArr.find((item,index)=> item.id===userId.value)
 
-    // undefined??
+    // undefined --> null같은 느낌
     if(findedUser === undefined) {
       return alert('해당 id를 가진 사용자가 없습니다.')
     }
