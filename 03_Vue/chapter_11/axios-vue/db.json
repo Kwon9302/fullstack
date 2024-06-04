@@ -1,36 +1,36 @@
 {
-    "todos":[
-        {
-            "id":"1",
-            "todo":"뉴진스보기",
-            "desc":"꼭보기",
-            "done":false
-        },
-
-        {
-            "id":"2",
-            "todo":"소녀시대보기",
-            "desc":"기린",
-            "done":false
-        },
-
-        {
-            "id":"3",
-            "todo":"유튜브보기",
-            "desc":"린스",
-            "done":false
-        }
-
-],
-"users" :[
+  "todos": [
     {
-        "id":"12",
-        "password":"12"
+      "id": "3",
+      "todo": "22",
+      "done": false,
+      "editing": false
     },
-
     {
-        "id" : "kk",
-        "password":"1234"
+      "id": "c1da",
+      "todo": "123",
+      "done": true
+    },
+    {
+      "id": "159a",
+      "todo": "1111",
+      "done": true
+    },
+    {
+      "id": "9f48",
+      "todo": "2222333344666",
+      "done": true,
+      "editing": true
     }
-]
+  ],
+  "users": [
+    {
+      "id": "12",
+      "password": "12"
+    },
+    {
+      "id": "kk",
+      "password": "1234"
+    }
+  ]
 }
