@@ -20,13 +20,19 @@
 
 <script setup>
 import { ref, computed } from "vue";
+// todo.js에서 export 변수명 , todo.js 확장자 붙이기
 import { useTodoListStore } from "@/stores/todo.js";
 
+// 할일 추가시 입력될 값,  input의 v-model과 연결
 const todo = ref("");
 
+// import한 store를 변수에 넣어주어 사용하여야 한다.
 const todoListStore = useTodoListStore();
+
+// 이거.. 그 배열그거.. 로 가져와서 todoListStore에 넣어준다.
 const { todoList, addTodo, deleteTodo, toggleDone } = todoListStore;
 
+// todoListStore에 있는 doneCount실행후 저장한다.
 const doneCount = computed(() => todoListStore.doneCount);
 
 const addTodoHandler = () => {

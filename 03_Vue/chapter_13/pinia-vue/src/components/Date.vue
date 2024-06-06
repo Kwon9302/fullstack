@@ -1,21 +1,30 @@
 <template>
     <div>
         <h1>Date</h1>
-        <h1>{{ dateMsg }}</h1>
+        <h1>{{ xx }}</h1>
+        <!-- <h1>{{ dateMsg }}</h1> -->
         <div>
-            <button @click="getYear">년도 출력</button>
-            <button @click="getMonth">월 출력</button>
-            <button @click="getDate">일자 출력</button>
+            <button @click="yy">년도 출력</button>
+            <button>월 출력</button>
+            <button>일자 출력</button>
         </div>
     </div>
 </template>
 
 <script setup>
-import { useDateStore } from "@/stores/date";
-import { computed } from "vue";
+import { dateStore } from "@/stores/useDateStore";
+import { ref, computed } from "vue";
 
-const dateStore = useDateStore();
-const { getYear, getMonth, getDate } = dateStore;
+// const dateStore = useDateStore();
+const date = dateStore();
+const xx = ref("");
+console.log("xx : ", xx);
 
-const dateMsg = computed(() => dateStore.dateMsg);
+function yy() {
+    // xx.value = computed(() => date.year);
+    xx.value = date.year;
+}
+// const { getYear, getMonth, getDate } = dateStore;
+// const { year, month, day } = dateStore;
+// const dateMsg = computed(() => dateStore.dateMsg);
 </script>
