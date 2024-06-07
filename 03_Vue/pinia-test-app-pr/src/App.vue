@@ -3,7 +3,7 @@
         <h1>TodoList 테스트(Composition API)</h1>
         <hr />
         할일 추가 : <input type="text" v-model="todo" />
-        <button @click="addTodo(todo)">추가</button>
+        <button @click="addTodoHandler">추가</button>
         <hr />
         <ul>
             <li v-for="todoItem in todoListPack" :key="todoItem.id">
@@ -30,8 +30,8 @@ const todoListStore = TodoListStore();
 const { todoListPack, addTodo } = todoListStore;
 
 // 여기서 왜 addTodo 안대지
-// const addTodoHandler = () => {
-//     addTodo(todo.value);
-//     todo.value = "";
-// };
+const addTodoHandler = () => {
+    addTodo(todo.value);
+    todo.value = "";
+};
 </script>
