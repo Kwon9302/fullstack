@@ -20,6 +20,7 @@
 
 <script setup>
 import { ref, computed } from "vue";
+
 // todo.js에서 export 변수명 , todo.js 확장자 붙이기
 import { useTodoListStore } from "@/stores/todo.js";
 
@@ -32,7 +33,7 @@ const todoListStore = useTodoListStore();
 // 이거.. 그 배열그거.. 로 가져와서 todoListStore에 넣어준다.
 const { todoList, addTodo, deleteTodo, toggleDone } = todoListStore;
 
-// todoListStore에 있는 doneCount실행후 저장한다.
+// todoListStore에 있는 doneCount실행후 저장한다. 원시값이라서 computed로 불러와 저장한다.
 const doneCount = computed(() => todoListStore.doneCount);
 
 const addTodoHandler = () => {

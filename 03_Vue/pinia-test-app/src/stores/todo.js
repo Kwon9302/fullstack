@@ -34,7 +34,6 @@ export const useTodoListStore = defineStore("todoList", () => {
             .length;
     });
 
-    // todoList의 개수 파악
     const todoList = computed(() => state.todoList);
 
     return { todoList, doneCount, addTodo, deleteTodo, toggleDone };
