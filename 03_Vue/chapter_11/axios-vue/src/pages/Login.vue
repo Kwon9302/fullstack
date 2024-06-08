@@ -25,7 +25,7 @@ async function login() {
         const url = "http://localhost:3000/users";
         const loginRes = await axios.get(url);
 
-        // console.log(loginRes)
+        console.log(loginRes);
 
         // 여기서 data는 db.json에서 입력한 json형태의 id, password 배열값들
         const userArr = loginRes.data;
