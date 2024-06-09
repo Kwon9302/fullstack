@@ -49,7 +49,7 @@
 <script setup>
 import axios from "axios";
 import { ref, reactive } from "vue";
-import { resolveTypeElements } from "vue/compiler-sfc";
+// import { resolveTypeElements } from "vue/compiler-sfc";
 
 const states = reactive({
     todoList: [],
@@ -80,7 +80,7 @@ async function addTodo() {
             todo: todo.value,
             done: false,
         });
-
+        console.log(addTodoRes);
         if (addTodoRes.status !== 201) return alert("Todo 추가 실패");
 
         todo.value = "";
@@ -105,9 +105,11 @@ async function deleteTodo(id) {
 async function toggleTodo(id) {
     try {
         const targetTodo = states.todoList.find((todo) => todo.id === id);
+
         const payload = { ...targetTodo, done: !targetTodo.done };
         const toggleTodoRes = await axios.put(BASEURL + `/${id}`, payload);
-
+        console.log(payload);
+        console.log(toggleTodoRes);
         if (toggleTodoRes.status !== 200) return alert("Todo toggle 실패");
 
         fetchTodoList();
